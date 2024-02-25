@@ -45,15 +45,16 @@ function displayGameOver() {
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
   }
 }
-var count = 3;
+var lives = 3;
+var wavecount = 1;
 function checkGameOver() {
   if (isGameOver) {
     return;
   }
 
   if (enemyBulletController.collideWith(player)) {
-    count -= 1;
-    if (count === 0) {
+    lives -= 1;
+    if (lives === 0) {
     isGameOver = true;
     }
   }
@@ -70,6 +71,12 @@ function checkGameOver() {
 }
 function updateLivesCount() {
   const livesCountSpan = document.getElementById('lives-count');
-  livesCountSpan.textContent = count.toString();
+  
+  livesCountSpan.textContent = lives.toString();
+}
+function updatewaveCount() {
+  const waveCountSpan = document.getElementById('wave-count');
+  
+  waveCountSpan.textContent = wavecount.toString();
 }
 setInterval(game, 1000/60);
