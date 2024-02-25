@@ -1,7 +1,19 @@
-.bad_ninja {
+.bad_ninja_pink {
     width:70px;
     height: 70px;
     background-image: url(https://i.postimg.cc/zvQtr1gj/Bad-Ninja.png);
+}
+
+.bad_ninja_green {
+    width:70px;
+    height: 70px;
+    background-image: url(https://i.postimg.cc/QN47XRgZ/Bad-Ninja-GREEN.png)
+}
+
+.bad_ninja_blue {
+    width:70px;
+    height: 70px;
+    background-image: url(https://i.postimg.cc/1zVnMHfn/Bad-Ninja-blue.png)
 }
 
 .good_ninja {
