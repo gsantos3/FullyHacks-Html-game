@@ -9,7 +9,7 @@
 :root {
   --body_bg: #fffaf1;
   --sky_100: #abe1ff;
-  --sky_300: #18aaff;
+  --sky_300: #0b0d0e;
   --blue_300: #385ddf;
   --purple_300: #9ea8ff;
   --purple_hover: #3b3561;
@@ -65,4 +65,16 @@ html {
 .fullypic {
   margin-top: 2rem;
   object-fit: cover;
+}
+.infopic {
+  margin-top: 2rem;
+  border: 1px solid #dddddd00;
+  border-radius: 9px;
+  padding: 5px;
+  width: 150px;
+}
+.title2 {
+  color: var(--sky_300);
+  margin-top: 1rem;
+  font-size: 3rem;
 }
