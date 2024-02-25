@@ -7,7 +7,7 @@
 
 /* Define your color scheme here, taken from Fullyhacks color scheme. */
 :root {
-  --body_bg: #fffaf1;
+  --body_bg: #000000;
   --sky_100: #abe1ff;
   --sky_300: #0b0d0e;
   --blue_300: #385ddf;
@@ -53,7 +53,7 @@ html {
 }
 
 .title {
-  color: var(--sky_300);
+  color: rgb(247, 28, 28);
   margin-top: 2rem;
   font-size: 2rem;
 }
@@ -74,7 +74,17 @@ html {
   width: 150px;
 }
 .title2 {
-  color: var(--sky_300);
+  color: #df389c;
   margin-top: 1rem;
   font-size: 3rem;
 }
+
+.title2 {
+  color: #df389c;
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+.titleCaption
+  {
+    color: #df389c;
+  }
