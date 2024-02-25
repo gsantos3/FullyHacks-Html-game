@@ -45,14 +45,17 @@ function displayGameOver() {
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
   }
 }
-
+var count = 0;
 function checkGameOver() {
   if (isGameOver) {
     return;
   }
 
   if (enemyBulletController.collideWith(player)) {
+    count++
+    if (count >= 3) {
     isGameOver = true;
+    }
   }
 
   if (enemyController.collideWith(player)) {
