@@ -1,7 +1,7 @@
 import Enemy from "./Enemy.js";
 import MovingDirection from "./MovingDirection.js";
 
-export default class EnemyController {
+export default class EnemyController { //matrix to hold enemy positions
   enemyMap = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -12,26 +12,26 @@ export default class EnemyController {
   ];
   enemyRows = [];
 
-  currentDirection = MovingDirection.right;
+  currentDirection = MovingDirection.right; // moving behavior
   xVelocity = 0;
-  yVelocity = 0;
+  yVelocity = 0;  //speeds
   defaultXVelocity = 1;
   defaultYVelocity = 1;
-  moveDownTimerDefault = 30;
-  moveDownTimer = this.moveDownTimerDefault;
-  fireBulletTimerDefault = 100;
+  moveDownTimerDefault = 30; //moving down to get closer to player
+  moveDownTimer = this.moveDownTimerDefault; //specific timing
+  fireBulletTimerDefault = 100; //specifing firing speed
   fireBulletTimer = this.fireBulletTimerDefault;
 
-  constructor(canvas, enemyBulletController, playerBulletController) {
+  constructor(canvas, enemyBulletController, playerBulletController) { //constructor for enemy controller
     this.canvas = canvas;
-    this.enemyBulletController = enemyBulletController;
+    this.enemyBulletController = enemyBulletController; 
     this.playerBulletController = playerBulletController;
-    this.enemyDeathSound = new Audio("sounds/enemy-death.wav");
-    this.enemyDeathSound.volume = 0.1;
+    this.enemyDeathSound = new Audio("deathsound");
+    this.enemyDeathSound.volume = 0.1; 
     this.createEnemies();
   }
 
-  draw(ctx) {
+  draw(ctx) { //draw method
     this.decrementMoveDownTimer();
     this.updateVelocityAndDirection();
     this.collisionDetection();
@@ -40,12 +40,12 @@ export default class EnemyController {
     this.fireBullet();
   }
 
-  collisionDetection() {
-    this.enemyRows.forEach((enemyRow) => {
-      enemyRow.forEach((enemy, enemyIndex) => {
-        if (this.playerBulletController.collideWith(enemy)) {
+  collisionDetection() {  //collision detection 
+    this.enemyRows.forEach((enemyRow) => { //for every row,
+      enemyRow.forEach((enemy, enemyIndex) => {//enemy
+        if (this.playerBulletController.collideWith(enemy)) { // check collsion
           this.enemyDeathSound.currentTime = 0;
-          this.enemyDeathSound.play();
+          this.enemyDeathSound.play(); //play a sound,(unused because we're not using sounds)
           enemyRow.splice(enemyIndex, 1);
         }
       });
