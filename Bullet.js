@@ -5,15 +5,17 @@ export default class Bullet {
       this.y = y;
       this.velocity = velocity;
       this.bulletColor = bulletColor;
-  
-      this.width = 5;
+      this.image = new Image();
+      this.image.src = "https://i.postimg.cc/pr3ZSYwc/Ninja-Star.png";
+      this.width = 20;
       this.height = 20;
     }
   
     draw(ctx) {
       this.y -= this.velocity;
       ctx.fillStyle = this.bulletColor;
-      ctx.fillRect(this.x, this.y, this.width, this.height);
+      ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+      
     }
   
     collideWith(sprite) {
