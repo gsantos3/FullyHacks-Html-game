@@ -57,7 +57,13 @@ html {
   margin-top: 2rem;
   font-size: 2rem;
 }
-
+.title3 {
+  color: rgb(60, 44, 44);
+  text-shadow: 0 0 0px #ff6666, 0 0 5px #ff6666, 0 0 14px #ff6666, 0 0 20px #ff6666, 
+  0 0 70px #ff6666, 0 0 80px #ff6666, 0 0 90px #ff6666, 0 0 100px #ff6666;
+  margin-top: 1rem;
+  font-size: 3rem;
+}
 .pictureCaption {
   margin-top: 1rem;
 }
