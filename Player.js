@@ -13,7 +13,7 @@ export default class Player {
       this.width = 50;
       this.height = 48;
       this.image = new Image();
-      this.image.src = "https://i.postimg.cc/rFtgr34B/Good-Ninja.png";
+      this.image.src = "/images/Good-Ninja.png";
   
       document.addEventListener("keydown", this.keydown);
       document.addEventListener("keyup", this.keyup);

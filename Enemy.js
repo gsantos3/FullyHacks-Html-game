@@ -6,7 +6,8 @@ export default class Enemy {
       this.height = 32;
   
       this.image = new Image();
-      this.image.src = `https://i.postimg.cc/zvQtr1gj/Bad-Ninja.png`;
+      
+      this.image.src = `/images/Bad-Ninja${imageNumber}.png`;
     }
   
     draw(ctx) {
