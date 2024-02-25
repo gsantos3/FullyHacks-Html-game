@@ -1,0 +1,17 @@
+.bad_ninja {
+    width:70px;
+    height: 70px;
+    background-image: url(https://i.postimg.cc/zvQtr1gj/Bad-Ninja.png);
+}
+
+.good_ninja {
+    max-width: 70px;
+    height: 70px;
+    background-image: url(https://i.postimg.cc/rFtgr34B/Good-Ninja.png)
+}
+
+.ninja_star {
+    width: 40px;
+    height: 40px;
+    background-image: url(https://i.postimg.cc/pr3ZSYwc/Ninja-Star.png);
+}
